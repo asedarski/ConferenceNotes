@@ -1,4 +1,5 @@
 # Class Hotdog Extends Sandwich
+## Justin Falcone - BuzzFeed
   - Hierarchy
     - Composition over inheritance
       - Follows a pattern of greater abstraction

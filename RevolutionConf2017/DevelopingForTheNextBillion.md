@@ -1,4 +1,5 @@
 # The Next Billion: Global Mobile Computing Trends
+## Michael Rollins - Yahoo!
   - Talking about third world countries and what their computing needs are
   - Growth is declining because we've saturated the first 2billion users
   - "The sneaker net" - In Cuba flash drives with data were delivered from one place to small mom & pop shops where people can purchase that data
