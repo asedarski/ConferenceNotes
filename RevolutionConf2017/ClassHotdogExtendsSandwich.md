@@ -1,4 +1,4 @@
-#Class Hotdog Extends Sandwich
+# Class Hotdog Extends Sandwich
   - Hierarchy
     - Composition over inheritance
       - Follows a pattern of greater abstraction

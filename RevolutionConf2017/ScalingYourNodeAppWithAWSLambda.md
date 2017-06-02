@@ -1,4 +1,4 @@
-#Scale Your Node Application, Forget the Infrastructure - Getting the most out of AWS Lambda
+# Scale Your Node Application, Forget the Infrastructure - Getting the most out of AWS Lambda
   - Lambda is
     - Serverless
     - Stateless
