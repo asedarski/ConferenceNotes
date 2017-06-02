@@ -1,0 +1,45 @@
+# Suffering: Rebasing Reality : Michael Rollins
+## Michael Rollins - Flurry
+- In a lot of ways going through suffering is like rebasing...
+- As humans we naturally avoid suffering, but is this the right way?
+    - Some of the greatest achievements have been made through suffering
+- Paul shows us to embrace the suffering and that we should glory in it
+- MLK Jr. in suffering there's a choice:
+    - React with bitterness
+    - Transform the suffering into a creative force
+- Let's assume we've chosen to embrace suffering
+- Tools for coping:
+    - Laughter
+        - Nothing shows a man's character more than what he laughs at
+    - Family and community
+        - People that can advocate and do for you when you can't
+        - Suffering in isolation is hard
+    - Faith
+        - The belief that someone has your back is really powerful
+        - The belief that all of this has a purpose is critical
+    - Honesty
+        - Really tell people how it is
+        - Bitch... get it off your chest
+    - Writing/Journaling/Social Media
+        - Put your inner turmoil into words
+        - Easier way to inform everyone around you
+    - Work
+        - Find something other than your suffering to focus on
+    - Retreat
+        - Sometimes you need to retreat for a day, or a few days
+        - A time to shut it all off
+    - Thankfulness
+        - There's always something left to be thankful for
+        - Starting to list what you're thankful for, that list quickly grows
+        - Despair cannot conquer thankfulness
+    - When there is nothing left to do, stand -Paul
+        - Show you're not crushed... you're still standing and still moving
+- Purpose
+    - Giving your suffering a purpose makes it lose power over you
+    - Find a way to help others through your suffering
+    - Help yourself as well
+        - Sometimes sharing your story helps you heal and can free you
+- Once you go through it, there is change
+    - Thriving exists on the other side of survival
+    - You have new skills and a new perspective
+    - You're now a different person
