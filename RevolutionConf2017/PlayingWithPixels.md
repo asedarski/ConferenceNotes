@@ -1,0 +1,64 @@
+# Playing With Pixels: Photorealistic 3D
+## Hunter Loftis - Heroku
+  - 1995 Toy Story was the first full feature movie created by computers
+    - Before that was casper (the ghost was CGI) and Jurrasic Park
+    - There were more PhDs working on the film than any other movie in history (Steve Jobs was on the project)
+    - $30,000,000 to produce Toy Story
+    - $364,000,00 made from the movie
+    - The graphics of toy story was far beyond what was currently out at the time
+    - It took an average of 3 hours to render a single frame on the fastest computer
+    - The final cut took 800,000 hours to render (91 years)
+    - They used 117 computers in parallel to render the movie
+  - There are two different camps of 3D rendering
+    - Graphics vs. Physics
+    - Physics (pixar) uses the natural laws of light and things of the world to really show 3D
+    - Grapics is like painting triangles
+  - Monte Carlo Path Tracing
+    - State of the art light simulation
+    - The algorithm really is simple at its core
+    - Characteristics  you get with Path Tracing
+        - Specular highlights
+        - Soft shadows
+        - Reflections
+        - Refractions
+        - Caustics
+        - Color bleeding
+        - Depth of field
+  - v0.0.1 -- Basically drew a circle
+  - Rendering Equation
+    - Path tracing is a solution to the rendering equation
+  - Path tracing is based on a set of easily understood principles
+  - What is light?
+    - An electromagnetic wave
+    - Ray (origin + direction)
+    - Color (RGB)
+    - When light hits something
+        - It either reflects immediately OR
+        - Refracts into the object
+        - Metals do not refract
+        - Non metals have different rules depending on the composition
+        - Reflect - diffuse - transmit
+        - Percentages of those three depend on angle and composition
+  - How can we simulate light?
+    - Path tracing the light source goes backwards (from the camera traces backwards to the light source)
+    - Each time the light hits a point it loses a bit of energy
+    - We can't predict how the light is going to bounce---- WE DON'T! The path tracer randomizes it
+    - Monte carlo integration
+        - Randomly choose a selection add them up and average them -- You'll probably get pretty close to the real answer
+    - Bidirectional Scattering Distribution Function (BSDF)
+        - Each material gets a different probablility for it to reflect, transmit or diffuse
+        - Every company has a different method for calculating this probability
+        - Reflect based on Schlick's formula for Fresnel
+        - Transmit based on materials transparency
+        - Diffuse whatever light is leftover
+    - Trace - recursively shoot rays at objects
+    - BSDF - reflect/refract light all over
+    - Recursion depth
+        - trace -> bsdf -> trace -> bsdf -> trace....
+        - How to keep your path tracer unbiased
+        - How to determine the optimal recursion depth
+            - This one uses an algorithm called Russian Roulette
+            - At every step in the trace, you have a random chance of killing the ray
+            - At each step that chance is weighted by how much energy has been lost at that point
+  - [Github Project](http://github.com/hunterloftis/pathtracer)
+  - [Demo](http://hunterloftis.github.io/pathtracer)
