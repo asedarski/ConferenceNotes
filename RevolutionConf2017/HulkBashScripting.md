@@ -1,0 +1,32 @@
+# Hulk Bash! From Green Shell Scripter to Super Hero
+## John Loy - WillowTree
+  - What is a terminal really?
+    - Terminals we use are usually really emulators for the true terminal
+    - Escape sequences
+      - Manipulate the cursor position and style
+      - Control text attributes, like color
+      - Erase text
+  - What is a shell really?
+    - It's an interpreter
+    - Has a set of rules it follows
+      - Needs to wait for end of input
+      - Commands are made up of tokens
+      - Metacharacters - special characters that need to be escaped if used in a different context
+    - Made up of keywords and commands
+  - Processes and signals
+    - `ps -t` gives a list of processes
+    - `pstree` list process as a tree
+    - `pgrep` search for PID by name
+    - `pkill` search and kill processes by name
+  - The shell and subshell environments
+    - Login shell
+      - What's started when you login to the system itself on Linux
+    - Interactive shell
+      - Shell where you're interacting with the command line
+    - Parenthesis make a subshell
+  - Standard I/O and redirection
+    - Read from a file
+    - Write to a file
+    - Truncate a file
+    - Command as file
+    - Can open up TCP clients
