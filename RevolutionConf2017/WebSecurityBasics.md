@@ -1,0 +1,68 @@
+# Web Security Basics
+## Eli White - One for All Events
+  - These are things that are inherent to HTML and HTTP.. We all need to think about defend against it as web developers
+  - [OWASP Resource](http://owasp.org/)
+  - FIEO
+    - Filter Input Escape Output
+    - The #1 rule
+    - Filtering
+        - Not a direct security measure
+        - Simplifies the security later (kinda ensures nothing really needs to be escaped later)
+        - Provides security in depth
+        - Makes for cleaner data
+        - More layers of protection means less chance of exploit
+        - Validate
+            - Checking that the data is what was expected and if not, refuse it
+            - Drawback - could be refusing data that could be figured out (ie phone number with dashes)
+        - Sanitize
+            - Attempt to convert data into an expected value
+            - Drawback - accepting incorrect data
+    - Escaping
+        - Make the output safe to use
+        - Each type of output must be appropriate for the context
+  - SQL Injection
+    - A user having the ability to send data that is directly interpreted by your SQL engine
+    - Best way is to use prepared statements
+        - A SQL query with placeholders where the variables will go
+        - This prevents the SQL engine from actually interpreting the data as a SQL command
+  - Other types of injections
+    - Command injection
+        - ie. Uploading a file that has an executable name that they just ran on your server
+    - Unchecked file uploads
+        - ie. uploading an executable file
+    - Code injection
+        - User being able to directly inject code
+        - DON'T USE EVAL COMMAND
+  - XSS (Cross Site Scripting)
+    - User sending data that is executed as a script
+    - Forms
+    - User agent
+    - Request headers
+    - URL Strings
+    - Reflected XSS
+        - Directly echoing back content from the user
+        - Solution - escaping characters
+        - Chrome and safari have XSS Blockers but they're not reliable and only protect against simplest attacks
+    - Stored XSS
+        - Store the data in a database, and then later display it back
+        - Allows an attack to live on your website
+        - Solution - escape the output
+    - DOM XSS
+        - What happens in javaScript stays in javaScript
+        - Solution - a library that encodes input/escape output
+  - CSRF (Cross Site Request Forgery)
+    - A user having the ability to forge or force a request on the behalf of another user
+    - Simplistically via IMG or POST forms
+    - Solution - CSRF Tokens
+        - Do we have the token, is it the one we expect, and has it not expired
+        - Also have to make sure we have protected against XSS
+  - Clickjacking
+    - Tricks a user into physically making a click on the remote website without realizing it
+    - Gets around CSRF protection
+    - Somehow you have a button or a link that you've made people want to click
+    - Putting an iframe of another website directly on top of the button that you drew, and making it opaque
+    - Solution - X-Frame-Options header
+        - Telling the browser whether or not the website should be allowed to render in an iframe
+        - DENY
+        - SAMEORIGIN
+        - Not all older browsers support it
