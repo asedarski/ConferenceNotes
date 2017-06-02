@@ -1,0 +1,20 @@
+#Scale Your Node Application, Forget the Infrastructure - Getting the most out of AWS Lambda
+  - Lambda is
+    - Serverless
+    - Stateless
+    - Trigger based
+    - Your executable code
+    - Without restrictions
+    - Price based on execution time and memory
+  - SOA (Service Oriented Architecture)/Microservices
+    - One function - one purpose
+  - Scalable Inputs and Outputs
+    - Lambda is very scalable
+  - Check if Data Exists
+    - Stateless... BUT data could be there
+    - Check in /tmp
+  - Debugging
+    - Use modules with Local Harness
+    - All the logic should be in modules
+    - The handler should be a minimal wrapper
+    - AWS X-Ray for watching the processes
