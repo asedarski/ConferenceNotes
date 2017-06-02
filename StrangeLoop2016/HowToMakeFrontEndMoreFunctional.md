@@ -1,0 +1,32 @@
+# How to Make Front-End More Functional
+## Julia Gao - OC Tanner
+- Immutable Data
+    - Can't change variables after assigning them
+    - Problems with Mutable Data
+        - No control over parameters and outputs
+        - Can produce bugs
+        - Not thread safe
+        - No reference sharing
+        - Easy to lose control when you change variables
+    - Some languages have persistent data structures
+    - No need to lock on multi-threaded operations
+    - What about loops?
+        - Loops encourage mutation
+- Pure Functions
+    - Same input, same output
+    - Example - math functions
+    - Benefits
+        - Expected results
+        - Easy to refactor
+        - More organized codebase
+        - Easier to onboard new employees
+    - Javascript has a lot of pure functions
+- Composable Functions
+    - Ie. Functions inside of functions
+- Types
+    - The code cares about the types... even if you don't
+- ImmutableJS
+    - JS library to restrict mutation
+    - ClojureScript
+    - PureScript
+- [Slides](http://slides.com/ryoia/fp-js#/)

@@ -1,0 +1,50 @@
+# Idealized Commit Logs
+## Alan Shreve - NGROK
+- Code is more often read instead of written
+- We're taught to think about how to write code, not thinking in mind with the readability of the code
+- Program comprehension is a subtask of debugging, fixing, developing...
+- How do we understand Software then?
+    - Documentation.... Maybe if you're lucky
+    - Debugging
+    - White board
+    - Print statements
+    - Read the Code
+        - Expert programmers read code with a semantic processor in our brain
+- So can we build mental models from code faster?
+    - Small programs are easy to understand
+    - Become difficult with edge cases, workarounds, features, error handling, etc.
+    - How do we simplify programs so that it's easier to read?
+        - Write test cases, run code coverage report, prune statements not covered, clean up and write the code back up
+        - Following this method, the code compiles and the test cases pass - PROGRAM SLICING
+- Program Slicing
+    - Many different types
+        - Forward Slicing
+        - Dynamic Slicing
+        - Thin Slicing
+        - Observational Slicing
+    - Static Slice
+        - Do not execute the program - algorithm solely based on static observation
+        - Behavior preserving
+        - Remove as many unnecessary statements as possible
+    - Dynamic Slice
+        - Execute program and record information about how it's executing
+- What can you do with it?
+    - Better context
+    - Good for maintenance tasks
+    - Skip tests by knowing exactly what that piece of code touches
+    - Reduce codebase size
+    - Debugging gets easier
+    - UNDERSTANDING/LEARNING
+- Tools - Most work on C, maybe Java
+    - Indus
+    - Giri
+    - Wala
+    - Frama-C plugin
+    - JSlice
+    - CodeSurfer
+- Idealized Commit Log
+    - Run code coverage
+    - Choose a best ordering for the test cases
+    - Create slice for tests 0-N
+    - Create Slice from 0-N+1
+    - Diff the slices

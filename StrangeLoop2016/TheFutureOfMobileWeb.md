@@ -1,0 +1,44 @@
+# The Future of Mobile Web
+## Paul Kinlan - Google
+- History of Data Storage and Computing
+- Distribution is the hardest problem in software
+- June 29, 2007 iPhone came out powered by the web
+- Distribution has become much easier, but there are still some problems
+- So many more steps for apps than there are for web apps, each step the user has to make before using the app, you lose users
+- 40% of people abandon a website if it takes more than 3 seconds to load
+- India has exploded in internet use from 2014-2015
+- Many devices are so limited in storage that apps can't be installed - they have to use the web
+- Performance is everything (~1hour worth of Indian minimum wage work to load 15 web pages)
+- Meta Platform
+    - Spans iOS, Android, Desktop
+    - Web, FB, Line, Kakao, WeChat
+    - Each app wants to be "the next browser"
+    - Trying to integrate API's into their own web
+- Mobile Web Game Plan
+    - Match Native on features
+        - Not just blind access
+        - Make sure the web platform is capable of everything native would be
+    - Focus on Performance
+        - RAIL
+            - Respond - under 100ms
+            - Animation - render every 16ms
+            - Idle - complete deferred work in 50ms chunks
+            - Load - ready to use in 1s
+    - Increase engagement
+        - What people want to go to Web instead of Native
+            - Homescreen access
+            - Push notifications
+            - Offline
+        - Progressive Web Applications
+            - The more the user uses the site, the more the site is integrated into the device
+            - Article: What, Exactly, Makes Something a Progressive Web App?
+                - Originates from a secure origin
+                - Loads while offline
+                - References a Web App Manifest
+            - Responsive, instant, reliable, smooth, engaging
+            - Service Worker API
+                - Adds app like lifecycle to a page
+                - Wakes up only when the OS says
+                - Service worker puts you in control of how the offline experience works
+    - Profit
+- Get browser vendors to fix their mess

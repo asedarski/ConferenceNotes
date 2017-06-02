@@ -1,0 +1,30 @@
+# Deep Dive into Unbounded Data Processing Systems
+## Monal Daxini - Netflix
+- The Unbounded Data Domain
+    - Streaming
+        - Infinite set
+        - Type of data processing engine
+    - Batch
+        - Finite set
+        - Type of executing engine
+- How to choose an engine?
+    - Latency
+    - Accuracy
+    - Cost
+- Accurate bounded data processing
+    - Reprocess the finite set again on failure
+- Accurate unbounded data processing
+    - Needs
+        - Consistent state
+            - Across failure via checkpointing
+        - Tools/techniques to reason about time
+- Triggers
+    - When to compute and materialize window results
+        - Before a window
+        - At window completion
+        - After window completion
+- Watermark
+    - Reasoning about completeness
+    - Watermarks describe event time progress
+    - Too slow -> events are delayed
+    - Too fast -> some data is late

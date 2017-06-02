@@ -1,0 +1,43 @@
+# Diocletian, Constantine, Bedouin Sayings, and Network Defense
+## Adam Wick - Galois, Inc.
+- We think we should find the bottleneck, fix it, and then we'll be good
+- Battle of Thermopylae
+    - Trapped them at the choke point
+    - Every API is one bad parse away from a big, big problem
+    - Networks are porous, there's not just one choke point in our networks
+- Defense in Depth
+    - Firewall
+    - Subnet defenses
+    - Protect each host
+    - Expensive and timely...
+- Ancient Roman Empire, strategy worked if they had:
+    - More money
+    - More people
+    - Better trained people
+    - A technical edge
+    - Eventually these things aren't true anymore
+- Diocletian - Late roman approach
+    - Decides it's too big of an empire, decides to appoint co-emperors (Constantine)
+    - Problems
+        - Not enough troops to hold border
+        - Not enough troops to defend every city
+    - Solutions
+        - Build walls around the cities
+        - Small but mobile army
+    - Key aspects
+        - Your border guard isn't there to defend against all attacks, mostly there to notify
+        - Know about the attack as soon as possible
+        - Hold key assets long enough for the calvary to get there
+- Maybe we should adopt the late Roman approach
+    - Intrusion detection
+        - Takes way too long to detect intrusions
+        - People think we should just keep out the intruders, but we need the protection on the other side just in case
+    - Buy modest firewall
+    - Protect your subnets with leftover money
+    - Protect critical nodes, then other nodes, then upgrade firewall, then fortify subnets... etc
+- Competition does not mean total war
+    - We need to collaborate to protect ourselves and each other
+- Things to remember
+    - You probably don't know your borders
+    - Spread the security across the system
+    - You have friends in the world

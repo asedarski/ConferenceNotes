@@ -1,0 +1,29 @@
+# Humanities x Technology
+## Ashley Nelson-Hornstein - Sound Off
+- Why have we turned from caring less about what the hardware is?
+- Commercials have become about the user experience, less about what the thing actually is
+- Intersection of liberal arts and technology
+    - Apple first develops the user experience and then creates the technology to support it
+    - Technology alone is not enough
+- Hide the complexity from the user
+- We strive for simple and intuitive interfaces
+- Dr. Land and creation of the first Polaroid camera
+- Video game *Never Alone*
+    - Generated with countless stories from Inupiac elders
+    - Created to share Alaskan heritage, culture and language
+    - They feel video games and media are what are pulling the youth away from the culture and language so they leveraged the media to bring them back
+- Depression Quest
+    - Interactive non-fiction game about living with depression
+    - Example of using technology to demonstrate what living with an illness is like
+    - Example of Other People Simulators - what it's like to be in someone else's shoes and make choices from their perspective
+        - Yields empathy and understanding
+- That Dragon, Cancer
+    - Game tells story of Joe who was diagnosed with cancer at 1 year
+    - Game starts at age 5
+    - Uses the families real voices
+    - Ability to explore the raw emotions of the people involved
+- Twitter
+    - A way we come to understand other perspectives
+    - Time for them to reassess their rules?
+- Creativity happens when people of different disciplines come together
+- Technology Challenges Art & the Art Challenges Technology

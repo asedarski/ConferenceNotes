@@ -1,0 +1,33 @@
+# A Swiss Army Knife of Debugging Tools
+## Julia Evans - Stripe
+- Case of the missing config file
+    - strace
+        - strace -f -e open bash
+        - Can make your program run much slower
+    - System calls
+        - socket
+        - open
+        - execve
+        - sendto
+        - read
+        - recvfrom
+        - write
+    - opensnoop
+        - fast
+- The case of the slow program
+    - Slow network process
+        - find pid of the process
+        - check the linux kernel stack for that process
+    - Slow on CPU
+    - dstat
+        - How much disk, network, CPU are you using each second
+    - top / htop / perf top
+        - perf top
+            - It can tell you which functions inside of programs are running slowly
+- The case of the french website
+    - Website is in one language sometimes and another sometimes else
+    - ngrep
+        - Shows network requests
+- perf
+    - In general, a performance analysis tool
+    - FlameGraph.pl
