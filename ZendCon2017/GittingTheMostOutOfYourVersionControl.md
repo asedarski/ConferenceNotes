@@ -1,0 +1,136 @@
+# Gitting the Most Out of Your Version Control
+## David Hayes - @davidbhayes
+[Talk Slides](http://www.davidbhayes.com/talks/gitting-the-most)
+- Benefits of git include not having to make multiple copies of a file
+- _Distributed_ version control
+    - You have various places where you can make your changes
+    - Multiple repositories
+    - Git
+- Why use git?
+    - Powerful
+    - Common
+    - Searchable
+- Other Git Hosts
+    - Gitlab
+    - Bitbucket
+    - Beanstalk
+- Interfaces
+    - Command line
+    - Gui Apps
+        - GitHub Desktop
+        - Atlassian Sourcetree
+        - Tower (Mac)
+        - GitKraken
+        - Most IDE's have a git management system
+- Basic Commands
+    - `git init`
+        - creates a .git directory
+    - `git add`
+        - add a file to Git tracking
+        - OR stage the changes for a future commit
+    - `git commit`
+        - keep in the repo what you did
+        - `-a`
+            - for adding all changed files
+        - `-m`
+            - for adding messages here in line
+        - `--amend`
+            - fixes last commit (changes the hash)
+    - `git status`
+        - learn the status of the repo at the current time
+    - `git diff`
+        - see line-level changes since last commit
+    - `git log`
+        - see all recent changes in reverse chronological order
+        - `--stat`
+            - file-level changes view
+    - `git mv`
+        - like `mv` but tracks the move
+    - `git rm`
+        - like `rm` but tracks deletion
+    - `git rm --cached`
+        - removes the file from Git but not the filesystem
+- Working With Others
+    - `git clone`
+        - copy an existing Git repo and sets as your "origin"
+    - `git push`
+        - send your commits to the origin
+    - `git pull`
+        - fetch and merge in the current state of the origin
+    - `git fetch`
+        - copy history from origin but do not merge it
+- Branching for Great Victory
+    - `git branch`
+        - list current branches
+        - `git branch branchname`
+            - creates but doesn't switch
+        - default branch is called `master`
+    - `git checkout`
+        - `git checkout branchname`
+            - puts you on a different branch
+        - `git checkout -b branchname`
+            - creates and checks out a branch
+    - `git merge branchname`
+        - pull contents of named branch into yours
+        - merge conflicts happen when two things are unable to be automatically reconciled
+            - most commonly best fixed manually
+    - `git rebase`
+        - change the diverging (root) commit of a branch
+        - useful for long-lived branches (but controversial)
+        - can be done as multi-stage CLI process or with text-editor via `git rebase -i`
+        - [useful tutorial](https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had)
+- Push Branches to Remote
+    - `git push -u origin <branch>`
+        - `-u` is short for `--set-upstream`
+- Less Common but Useful Things
+    - `git revert`
+        - create commits to undo bad commits
+        - does not _remove_ the bad commits
+    - `git reset`
+        - undo bad things (in your current working tree)
+        - `--soft`
+            - touches no files nor index
+        - `--mixed`
+            - sets index, not files
+        - ` --hard`
+            - revert all tracked files to initial state, doesn't touch untracked files
+                - `git clean -df`
+                    - removes untracked files
+    - `.gitignore`
+        - list of intentially unkept files
+        - each line is a pattern (regex)
+     - `.gitkeep`
+        - informal standard to allow you to commit "empty" directory
+        - like if you want logs in a certain place but never want to keep the logs inside it
+    - Detached HEAD State
+        - you're not on the tip of a known branch
+    - HEAD Notation
+        - `HEAD` is most recent commit
+        - `HEAD^` == `HEAD~` -- `HEAD~1` is one commit ago
+        - `HEAD^^` ~= `HEAD~2` is two commits ago (for linear history)
+            - both go backward through history but respond differently to merges
+        - `~` specifies generation, `^` specifies which parent (where there are many), so `HEAD~1^2` is the second parent of a generation ago
+        - [Good explanation](http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde)
+    - `git stash`
+        - clean current "dirty" working directory
+        - itself a sort of mini virtual git repo
+    - Squashing Commits Together
+        - controversial topic
+        - some believe in `git merge --squash`
+        - can be done with `git reset --soft HEAD~4` followed by the squashing commit
+        - `git rebase -i --autosquash` can also work
+    - `git bisect`
+        - a tool for testing to find the commit that broke a feature
+        - `git bisect start` to initiate
+    - `git blame`
+        - quick way to see the creator of the most recent changes in a given file
+        - useful to find out why/when
+    - `git cherry-pick <HASH>`
+        - pull over a commit to your current branch
+    - `git grep`
+        - search in the working tree for a string
+        - useful if you don't want to look in untracked files
+- Useful Resources
+    - [Fixing Common Mistakes and Undoing Bad Commits](https://www.youtube.com/watch?v=FdZecVxzJbk)
+    - [Dan Gitschooldude's YouTube Git Tutorials (in-depth FREE videos)](https://www.youtube.com/channel/UCshmCws1MijkZLMkPmOmzbQ)
+    - [Getting Git (solid $29 basics course)](https://gettinggit.com)
