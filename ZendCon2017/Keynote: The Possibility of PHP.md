@@ -1,0 +1,21 @@
+# Keynote: The Possibility of PHP
+## Zeev Suraski - Zend Co Founder - @zeevs
+- PHP's impact is worldwide
+    - A group in Bawal is trying to increase computer skills with PHP
+    - Organization in Ghana is connecting large scale farmers and buyers instead of using middle men who make most of the money
+- The PHP tech community bands together for it's people
+- BMW's use PHP for telemetry - discovered because of a PHP error on the display of a car
+- Panasonic uses PHP in airplane's in flight entertainment devices
+- PHP's performance has improved greatly
+    - Fractals are a good way to demonstrate it because they're very computationally intensive
+    - PHP 5.6 runs about 1.8-2.0 frames per second
+    - PHP 4.4 runs about 0.3-0.4 frames per second (a huge visual difference)
+    - PHP 3.0 runs... kind of.... after a LONG time.. about 0.03 frames per second
+    - PHP 6 averaged about 0.5 frames per second - it was so slow, that's why there was no PHP 6
+    - PHP 7.0 runs about 3.5 frames per second - wayyy faster than 5.6
+        - 40% gains in performance
+    - PHP 7.3 runs about 7.4 frames per second
+        - JIT - Just In Time delivery/compilation
+        - Amazingly fast
+        - Gotcha: unable to see substantial gains in Web Applications
+        - More for big data or computationally intensive applications
