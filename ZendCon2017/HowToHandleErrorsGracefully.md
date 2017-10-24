@@ -1,0 +1,44 @@
+# Expect the Unexpected: How to Handle Errors Gracefully
+## Bastian Hofmann - @BastianHofmann
+[Slides](https://speakerdeck.com/bastianhofmann/expect-the-un-expected-how-to-handle-errors-gracefully-1)
+- Detecting that something is wrong
+    - Logging
+    - PHP Error logs
+    - Monolog logging
+    - Include request information in logs
+    - PHP has throwables, notices, warnings, errors - have to handle them all
+    - Can create error handlers to turn exceptions -> errors or errors -> exceptions
+    - Fatal errors
+        - Common one is OutOfMemory
+        - Use `error_get_last()` in a Shutdown Handler
+    - Log in a structured way
+    - JSON is a nice way to handle it
+    - Microservices
+        - Use a unique trace_id to track which service the error/request came from
+    - Getting to the logs
+        - Put the logs in a central place
+    - Monitoring
+        - To detect things like
+            - Performance regression
+            - Conversion regression
+        - Use things like graphing metrics like graphana
+        - Additionally use alerts so someone isn't just having to monitor graphs
+- Handling Exceptions Gracefully
+    - Component based frontend
+        - Show as much as possible and only leave out what isn't working
+    - Ensure safe deployments
+        - Use feature flags and checks within the code to show/hide features
+    - Safe service-to-service communications
+        - Set sensible timeouts between services
+    - Don't call service instances directly
+        - Use a load balancer that chooses one running instance
+    - Handle traffic spikes
+        - Set throttling - only allow a certain % of calls
+        - LinkerD is a service that can help with that
+- Key Points
+    - Central Logging
+    - Monitor and Measure Everything
+    - Alerts
+    - Graceful Exception Handling - Component Based Pages
+    - Deployment Feature Flags
+    - Circuit Breakers for Microservices
