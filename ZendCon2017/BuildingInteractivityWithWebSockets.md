@@ -1,0 +1,117 @@
+# Building Interactivity with WebSockets
+## Wim Godden - @wimgtr - Founder of [Cu.be Solutions](http://cu.be)
+Developer of PHPCompatability
+- Old: Show content, wait for the user to click link or button
+    - Basically a refresh... :-(
+- New: Show content + send user real-time updates
+- Real-time = key to keep users on your platform
+- First real-time implementation: AJAX polling
+    - Potentially puts a lot of load on the server
+    - Short polling: get -> status 0 -> get -> status 0 -> get -> status 1 -> get... and so on
+    - Long polling: get -> server waits to respond until there is data then sends status 1
+    - SSE (Server Sent Events): get -> server waits to respond until there is data and then the connection
+      stays open and server continues to send the data
+        - Works for one way data transfers
+    - The process of TCP connections is slow (even more so with SSL)
+- WebSockets
+    - Initiate and upgrade connection -> data transfer back and forth
+    - Handshake
+        - Sends a GET request with headers
+            - Upgrade: websocket
+            - Connection: upgrade
+            - Origin: http://yourhost.com
+            - Sec-Websocket-Key: _string_
+            - Sec-Websocket-Protocol: chat (server and client can use different protocol)
+            - Sec-Websocket-Version: 13
+        - Server response
+            - HTTP/1.1 101 Switching Protocols
+            - Upgrade: websocket
+            - Connection: upgrade
+            - Sec-Websocket-Accept: origin key with some changes (didn't quite catch that)
+            - Sec-Websocket-Protocol: chat
+    - Protocols
+        - Must be supported by client and server
+        - Several exist
+            - WAMP (provides PubSub)
+            - STOMP (provides messaging)
+        - Can be application specific (custom)
+    - Events
+        - Open
+        - Close
+        - Message
+        - Error
+    - Methods
+        - send()
+        - close()
+    - Uses
+        - Synchronize data between users
+        - Multiplayer HTML5 games
+        - Live feeds
+        - Auctions
+        - Real-time updates on running processes
+        - Financial applications
+        - Messaging / chat
+    - Advantages
+        - Full-duplex messaging
+        - 100% asynchronus
+        - HTTP overhead only on initial handshake
+        - Low latency
+        - Low bandwidth
+        - Messages can be fragmented
+            - Sent partially (when message is not complete yet)
+            - Sent in-between other messages
+            - Ex. sending an image in chat can be broken up into chunks
+    - Disadvantages
+        - No caching (unlike XHR/HTTP)
+        - Some application changes required
+        - No message acknowledgement built-in
+        - Ping-pong (present in RFC) not in most browsers
+            - Write your own
+            - Use socket.io
+    - Server side code is run once which can support 1-1000s of client websockets
+    - Using PubSub
+        - Publish/Subscribe
+        - Central message broker
+        - Clients publish messages or subscribe
+        - Examples:
+            - ZeroMQ
+            - Redis
+        - PubSub to clients
+            - Directly in the browser: bad idea, gives client too much control
+            - Defined in PHP, only exposed via the websocket layer
+    - Security
+        - Always use TLS (wss:// instead of ws://)
+        - Verify the Origin header - but don't think this secures you
+        - Pass along a random token to the handshake request
+            - Don't forget: session cookies in HTTP are not automatically sessions in WebSocket
+    - HTTP
+        - It's what we use every day
+        - HTTP/2
+            - Developed by Google as SPDY
+            - Designed for speed
+            - Multiple simultaneous requests/responses in one connection
+            - Binary format (pro: more efficient, con: harder to debug)
+            - TLS/SSL encryption is standard
+            - Built-in prioritization
+            - Server push
+                - Not a replacement for websocket since it doesn't allow for true two way communication
+            - Header compression
+            - No websocket support
+    - Tips and Tricks
+        - If you proxy WebSocket traffic through nginx
+            - Increase proxy read and send timeouts
+        - HAProxy
+            - Increase timeout
+        - [Interesting Read](https://hpbn.co/websocket/)
+        - Beware: if your websocket server crashes, you lose all your clients and status
+    - PHP Websocket server libraries
+        - Ratchet
+        - Woketo (client + server, PHP7 only)
+        - phpws
+    - Useful tools
+        - websocket.org
+        - Chrome developer console
+        - Firefox add-on: WebSockets Monitor
+        - [Thor (benchmark)](https://github.com/observing/thor)
+        - [Websocket-bench](https://github.com/M6Web/websocket-bench)
+        - Socket.io for backwards compatibility
