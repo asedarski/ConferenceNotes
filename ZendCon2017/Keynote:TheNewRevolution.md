@@ -1,0 +1,24 @@
+# Keynote: The New Revolution
+## Samantha Quinones - @ieatkillerbees
+- Bob Taylor - an effort to create a network of computers in the 60s (which wasn't what they did - they were for math)
+- IMP: Interface Message Processor
+- The network exploded
+- The internet and devices are becoming an extension of our own neurology
+- Kids now don't really know or care about where the internet comes from, but that it's just there like houses/trees/etc.
+- Younger generation the internet is just an omnipresent thing in their lives
+- The amount of things we use that are network connected now is kinda scary
+    - Childrens toys
+    - Medical devices (pacemakers, insulin pumps, etc.)
+    - Vehicle devices (entertainment, GPS, etc.)
+    - VW emissions scandal - chief engineer got 40 months in prision and big fine for the decision
+- We can do some real good with the networks now though
+    - Zika outbreak heatmap about outbreaks
+    - Smartwatch activity monitors
+- Open Source has the power to transform
+- Be tomorrows hero
+    - Embrace the see it, do it, teach it mentality
+    - Share the knowledge
+    - Fix the bugs
+    - Demand better code reviews
+    - Setup a culture of blameless accountability
+    - Help your non technical friends understand privacy and how to protect it
