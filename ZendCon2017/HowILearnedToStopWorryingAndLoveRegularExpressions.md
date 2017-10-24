@@ -1,0 +1,86 @@
+# How I Learned to Stop Worrying and Love Regular Expressions
+## Jordi Boggiano - @seldaek
+- lead maintainer of Composer
+- Co-founder of packagist
+- Regex began in 1956
+- Regex Components
+    - Pattern
+    - Subject String
+    - Matches
+- Pattern Components
+    - Characters
+    - Metacharacters
+        - ex. `.`
+    - Escaping metacharacters
+- Character classes
+    - ex. `[abcd]`
+    - With ranges
+        - ex. `[a-d]`
+        - `[A-z]+` includes some characters inbetween because ASCII
+    - Negated classes
+        - ex. `[^a-z]`
+    - Escaping
+        - ex. `[//^/]`
+    - Match ASCII control characters
+        - ex. `[\x00-\x1f]`
+    - Matching unicode characters
+        - ex. `[\x{25E6}-\x{25ef}]+`
+- Character Class Shortcuts
+    - Word Chars
+        - `\w` = [A-Za-z0-9_]
+        - `\W` = [^A-Za-z0-9_]
+    - Whitespace Chars
+        - `\s`
+        - `\S`
+    - Digits
+        - `\d`
+        - `\D`
+- Dot Metacharacter
+    - `.` = [^\n]
+- Subpatterns and Alternations
+    - ex. `bo(mb|ys)` = Stay on the __bomb__ run, __boys__!
+    - Subpatterns can be named
+        - `(?P<first>\w)\w+(?P<last>\w)`
+    - Put most specific things first for matching alternations
+        - `bobby|bob` instead of `bob|bobby`
+- Quantifiers
+    - Cope with uncertainty
+    - ? = 0-1 times
+    - * = 0+ times
+    - + = 1+ times
+    - {x, y} = between x-y times
+    - Lazy matching
+        - {x, y}?
+        - It will only match a minimal amount
+    - Possessive Quantifiers
+        - Match and do not give up matches
+        - ex. `trig++ger`
+- Anchors
+    - ^ beginning
+    - $ end
+    - With m modifier - the beginning and end of the lines
+    - \A = absolute beginning of the string
+    - \z = absolute end of the string
+- Back-references to Subpatterns
+    - `(['"])\w+\1` = avoids matching mixed quotes
+- Lookahead & Lookbehind
+    - Lets match words surrounded by *'s
+    - `\*\w+\*` includes the *s
+    - `(?<=\*)\w+(?=\*)` excludes the *s
+    - `(?<!\*)\w+(?!\*)` - matches everything not surrounded by a * but causes issues for words inside matching some of the characters
+    - `\b(?<!\*)\w+(?!\*)\b`
+- Conditionals
+    - Not recommended - better to use if/elseif within code
+- Pattern Delimiters
+    - You can use // or {}
+- Modifiers
+    - `i` = case insensitive
+    - `m` = multiline
+    - `s` = single line
+    - `u` = unicode
+    - `D` = Dollar end only
+    - `x` = free-spacing mode (good for comments)
+- Regex Engines
+    - First match wins
+    - An overall match is always preferred to a non-match
+    - The engine backtracks to the last match encountered when no match is found
