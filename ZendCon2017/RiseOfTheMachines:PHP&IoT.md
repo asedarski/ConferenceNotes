@@ -1,0 +1,51 @@
+# Rise of the Machines: PHP & IoT
+## Colin O'Dell - @colinodell
+- Interet of Things
+- We can run PHP on devices, the cloud, on a server
+- DIY IoT Devices
+    - Raspberry Pi
+        - Because it has to run an OS, you don't have direct access to the pins
+    - Arduino
+        - Code in C
+        - No OS
+        - No built in internet connectivity
+    - How to choose?
+        - Identify required features
+        - Ideal programming language
+        - Consider power requirements
+        - Size/footprint
+- Four Examples Using PHP
+    - Uptime Monitor
+        - Use Pi to monitor if site is up
+        - Uses an LED to indicate
+        - Use resistors for LEDs because they can only handle so much power
+        - PiPHP: GPIO
+            - Library for low level access to the GPIO pins
+            - Used to control outputs (LEDs, motors, valves, pumps) or read inputs (sensors)
+    - Conference Room Occupancy Sensor
+        - Detects movement in the room, sends room status to Slack
+        - PIR Sensor: motion sensor
+        - PHP GPIO - Input Signal Interrupts
+        - Signal tells when motion is detected but can't just send when each motion event occurs
+        - `ColinODell\PHPIoTExamples\PHPPIRSensor` - class for movement tracking
+    - Alexa Custom Skill
+        - PHP + Laravel to handle request for ZendCon session information
+    - Packagist Download Counter
+        - Display download counts from the Packagist API with Particle Photon
+        - Particle Photon
+            - WiFi built in
+            - OTA Flashing
+            - Built in webhook support
+        - JSON document from Packagist is too big
+            - Yahoo YQL - but this was down too often
+            - Created a JSON parser to just get the count
+        - Must have a `setup` function and a `loop` function
+        - `setup`
+            - shutdown - wakes up the device
+            - subscribe to webhook
+        - `loop`
+            - fetch updates
+            - set the digits
+            - publish
+- [Source Code](https://github.com/colinodell/php-iot-examples)
+- [More Projects](https://hackster.io/colinodell/projects)
