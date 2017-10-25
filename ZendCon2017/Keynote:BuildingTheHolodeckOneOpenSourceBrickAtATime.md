@@ -1,0 +1,25 @@
+# Keynote: Building the Holodeck, One Open Source Brick at a Time
+## Justin Reock
+- Open Software Freedom
+- Richard Stallman - founded the Free Software Foundation in 1983
+- Free isn't about the price tag, but about the rights to use/change/contribute to it
+- The GPL
+    - Software license
+    - If you enjoy/use the benefits of free software, you have to participate in it as well
+    - Once you publish under GPL, you can't "call backsies" on it
+- The web is really a software distribution channel
+- Open/Free software accelerates human innovation
+- Age of Enlightenment
+    - "Dare to know! Have courage to use your own reason." - _Immanuel Kant_
+    - Focus on publication
+    - John Locke - humans are born a blank slate and we learn through our experiences
+    - The Florentine Bottega
+        - An open community at work
+- Problems with Closed Development
+    - Inflexibility
+    - Slowness in obtaining software and media
+- Examples of Major Technologies:
+    - TensorFlow
+    - ARToolKit
+    - OpenGL
+    - Open Source Hardware Technologies
