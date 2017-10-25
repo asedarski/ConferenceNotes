@@ -1,0 +1,37 @@
+# Keynote: The Middleware Express
+## Matthew Weier O'Phinney
+- Legacy applications
+    - You have a feature you want to add, you go to implement it and find a bug
+    - Bug lists stack up
+    - You don't write tests because it's hard to test
+- "Version 1" Frameworks
+    - Had some testing capabilities but still relied on a lot of globals
+    - No longer even get security updates
+- How do we bridge frameworks?
+    - Port it? Then have to track bugs
+    - Setup a bridge network? Too much overhead
+- Framework upgrades bring about burnout
+- Standards
+    - PHP has standards
+    - Composer
+    - PHP-FIG (framework interoperability group)
+        - PSR's
+            - Mostly standards around interfaces
+            - PSR-7
+                - HTTP message interfaces
+            - PSR-15
+                - Request/Response handlers and middleware
+- PHP makes request/responses hard
+    - Have to look at super globals, but have to know the server setup, redirects, etc.
+    - It shouldn't be that hard, it's just text
+- PSR-7
+    - Request/Response interfaces started appearing on their own
+- Middleware
+    - Borrowed/stolen from Node.js
+    - `next` is a callable that points to the next part of the queue
+    - PSR-15 sets out to standardize middleware
+        - `RequestHandler` interface
+            - Basic lambda middleware
+        - Middleware takes a Request and a RequestHandler to return a response which could be a queue
+    - The goal is to remove the need for frameworks as it pertains to requests/responses
+    - Middleware commodotizes how web applications are built, but more than that, who can build them
