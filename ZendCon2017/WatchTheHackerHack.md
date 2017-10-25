@@ -1,0 +1,44 @@
+# Watch the Hakcer Hack!
+## Michael Hess - University of Michigan
+- What is security?
+    - CIA Triad
+        - Availability
+        - Integrity
+        - Confidentiality
+- Unplug
+    - Only way to be 100% safe
+- Risk
+    - Manage risk by understanding our surface area
+- Would I be a target?
+    - Things people say:
+        - No one cares about my little site
+        - I store records but no names
+        - I'm in X industry, no one cares about our records
+- Not just your webcode is at risk
+    - Apache/Nginx
+    - Mysql/Postgres
+    - Memcache/Rdis
+    - Solr
+    - Etc.
+- Hydra
+    - Tool for brute forcing sites
+- How to defend yourself?
+    - Best Practices
+    - Open Source Security Teams
+    - Pay for good hosting
+        - Shared hosting is not secure
+    - Authentication Security
+        - Add in password stretching
+            - Salt + Pepper + Hashing
+        - Multifactor Authentication
+            - Password + Something You Have / Something You Are
+    - Capability-Based Security
+        - You have to have a token that relates to the object you're trying to access
+    - Mandatory Access Control
+        - Rules about who can access certain systems
+    - Delegated Handling of Sensitive Data
+    - System Isolation
+        - Firewall between systems that don't need to talk to each other
+    - Keep your stack up to date
+    - Processes
+        - Security isn't a checkbox, it should be part of the workflow
