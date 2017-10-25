@@ -1,0 +1,25 @@
+# Debugging ElePHPants
+## Adam Culp - @adamculp
+- Manual debugging
+    - echo
+    - print_r
+    - var_dump
+    - etc
+    - It gets ugly and hard to follow
+- Automated
+    - Execute code a line at a time and inspect values as it's executing
+    - Breakpoints
+        - Inform the debugger to stop at a given point
+    - IDE Listening
+        - Activate listening in chosen IDE
+        - Call up the app in a browser
+    - IDE Debugging Starts
+        - Debug panel or perspective
+        - Give it commands on what to do next
+    - Methods for Step-Debugging
+        - Step Over
+            - Decline to follow call into a class or function
+        - Step Into
+            - Accept to follow call into a class or function
+        - Step Out
+            - Break out of a class or function, return to the next line from where it was called
