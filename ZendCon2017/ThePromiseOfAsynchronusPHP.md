@@ -1,0 +1,85 @@
+# The Promise of Asynchronus PHP
+## Wim Godden - @wimgtr
+- Synchronus Processing
+    - Process flows down, step by step
+- Asynchronus Processing
+    - Things can happen at the same time
+- Blocking I/O
+    - Disk reading/writing
+    - Network reading/writing
+    - Communication with the DB
+    - Sending mail
+    - Etc.
+- Non-Blocking = good
+    - Ability to work on multiple things at the same time
+    - Not entirely sequential anymore
+    - But how do you know when something is finished?
+        - Events
+            - Start
+            - Progress Update
+            - End (successfully)
+            - Failed
+- State of Asynchronus PHP
+    - Several built-in functions
+        - Pthreads
+            - PECL extension
+            - Multithreading
+            - Requires zts (thread-safe)
+        - pcntl_fork
+            - Forks a PHP process
+            - Multiprocessing, not multithreading
+            - No communication between processes
+            - No Apache
+            - Doesn't behave the same on all OS's
+        - Sequential curl requests
+            - curl_multi
+    - Several libraries (using the built-in functions)
+        - Libevent, libev, libuv
+            - Event handling libraries
+            - PHP Extensions
+            - Libevent: Memcached, Chrome, Tor...
+            - Libev -> Libuv
+            - Libuv 0.9+ : standalone
+        - ReactPHP
+            - Event-driven non-blocking I/O library
+            - Written in PHP
+            - Provides event-driven interface
+            - Implements event loop
+                - Based on ticks -> 1 tick = 1 loop iteration
+                - Timers
+                - Input/output -> callback
+            - Can build a simple webserver
+            - Promises and Deferred
+                - Promise is a placeholder for the result of an operation
+                - Deferred is the operation or the computation that will lead to the promise being fulfilled
+                - Promise can be resolved on fulfilled, failed or status changed
+            - Promises vs. Streams
+                - Promises
+                    - Very useful
+                    - But: limited to simple return values
+                - Streams
+                    - Much more powerful
+                    - Also somewhat more complex
+                    - Readable/Writable/Both
+                    - Through stream = filter
+                    - Not limited
+            - Based on ReactPHP
+                - Ratchet - websockets for PHP
+                - php-ar-drone - use PHP to control a drone
+        - Icicle (aka Amp)
+            - Similar to ReactPHP in basic concepts
+            - Uses generators (yield command)
+            - Compatible with React libraries through amphp/react-adapter
+            - Adds coroutines, allowing interrupting functions mid-way
+            - Adds iterator concept, allowing multiple items per process
+            - PHP7+ only
+            - Based on Amp
+                - Aerys - HTTP and Websocket server
+    - Facebook Hack
+        - Not recommended
+- Golden Rules & Warnings
+    - Asynchronus != faster code
+    - Don't assume your code won't remain as fast
+    - If you don't need a response, don't wait for one
+        - Maybe do things offline, like putting it in a queue (like our leads)
+    - Asynchronus doesn't guarantee an execution order
