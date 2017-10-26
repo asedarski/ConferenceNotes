@@ -1,5 +1,6 @@
 # How I Learned to Stop Worrying and Love Regular Expressions
 ## Jordi Boggiano - @seldaek
+[Slides](http://slides.seld.be/?file=2017-10-24+How+I+learned+to+stop+worrying+and+love+Regular+Expressions.html)
 - lead maintainer of Composer
 - Co-founder of packagist
 - Regex began in 1956

@@ -1,0 +1,62 @@
+# Refactoring Done Right
+## Brandon Savage
+- What is refactoring?
+    - Changing the structure without changing it's external behavior
+    - Reorganization
+    - Doesn't change the functionality
+- How do we know if the behavior is the same?
+    - Testing
+    - Most helpful here are functional tests/integration tests
+- What do you do if you don't have any tests?
+    - Refactoring without tests is hard
+    - Make tiny changes and manually test thoroughly (repetitive process)
+- What are we looking for when we refactor?
+    - Messy and Overly Complex Code
+        - Something just doesn't look right
+        - Why fix it?
+            - Code is meant to be read by humans
+        - Be expressive
+        - Be verbose
+        - Communicate intent
+        - Cyclomatic Complexity
+            - Measures decision points in your application
+            - Ex. 'if', 'while', 'for', 'case', etc.
+        - N-Path Complexity
+            - Number of unique paths in a routine
+            - Exponential
+        - PHP Mess Detector (phpmd)
+            - Measures Cyclomatic and N-Path complexity
+            - Ability to set the sensitivity
+    - Functions and Methods That Do Too Much
+        - Single responsibility doesn't just apply to objects
+        - Smaller functions are more useful for more things
+    - Dead Code
+        - If it's never called, stop keeping it around
+        - Code that is commented out is DEAD. Remove it
+        - Being able to go back to old code is what Version Control is for
+    - Coding Style
+        - Coding style matters from a bug perspective
+        - Some coding styles can introduce bugs
+        - Other coding styles can lead to frustration
+            - Indentation
+            - Tabs vs. Spaces
+        - PHP Code Sniffer (phpcs)
+        - StyleCI
+            - Automatically fixes style issues in PR's by creating a follow-up PR for the style corrections
+    - Procedural Code in Objects
+        - Procedural programming is incompatible with OOP
+    - SOLID Violations
+        - Best way to construct our objects
+        - Single Responsibility
+            - Inject dependencies we need
+            - Abstract out responsibilities
+        - Open/Closed and Liskov Substitution
+            - Entities should be open for extension but closed for modification
+            - Correctness of the program remains with substitution
+        - Interface Segregation
+        - Dependency Inversion
+            - Higher level modules shouldn't depend on lower level modules
+- Selling a Refactor to Your Boss
+    - Well factored code is easier to maintain and debug
+    - Code spends 80% of it's life in maintenance
+    - Developers spend 25% of their time debugging
