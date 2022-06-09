@@ -1,0 +1,56 @@
+# What's Next in Node.js?
+## Michael Dawson - Node lead @ Red Hat and IBM
+
+- Who decides what's next?
+  - Not Technical Steering Committee (TSC)
+  - Not Companies
+  - Not an individual contributor
+  - All collaborators
+    - Together
+    - In real time
+    - No pre-defined roadmap
+  - Driven by
+    - Doers
+    - Reviewers/Approvers
+    - Supported by project's documented priorities
+- Following what's next
+  - Github notifications
+  - Working groups and teams
+    - nodejs.org/calendar
+  - Strategic initiatives
+    - https://github.com/nodejs/node/blob/master/doc/contributing/strategic-initiatives.md
+  - Release notes
+- Next-10
+  - How do we make the next 10 years of Node.js just as good as the last 10 years?
+  - Foundation
+    - Technical values and priorities
+    - Constituencies
+    - Contituency needs
+  - Technical priorities
+    - https://github.com/nodejs/node/blob/master/doc/contributing/technical-priorities.md
+  - Mini summits
+  - Contributing docs
+    - https://github.com/nodejs/node/tree/master/doc/contributing
+    - maintaining-types-for-nodejs
+    - maintaining-http
+    - maintaining-web-assembly
+    - security-model-strategy
+  - How can I help?
+    - Join the effort
+    - Participate in the team's surveys
+    - Support key initiatives
+- Features - what's new/interesting (Node 18)?
+  - Experimental Fetch
+  - Experimental Test Runner
+  - ECMAScript Modules
+  - V8 10.1
+  - OpenSSL 3 (17.x)
+  - Default DNS resolution
+- Supply Chain Security
+  - Node.js was at the top of the criticality score
+  - Funding from Open Source Security Foundation
+    - Vulnerability triage/fixing/releases
+    - Documenting processes as template for ecosystem
+    - Accessing dependencies in context of supply chain
+  - Ecosystem security working group - https://github.com/nodejs/security-wg
+  - OpenJS Security collaboration space

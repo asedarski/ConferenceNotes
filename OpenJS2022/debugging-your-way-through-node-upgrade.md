@@ -1,0 +1,38 @@
+# Debugging Your Way Through a Node.js Upgrade
+## Bethany Griggs
+
+- Semantic versioning
+  - Caveats
+    - Who decides bugfix vs breaking?
+    - Unexpected side effects
+- Changelogs
+  - Review the major changelogs for the known breaking changes
+    - Ex. Upgrading from 14 to 16 you have to review 15 and 16
+  - Subsystems
+    - Node puts subsystems in changelogs to help narrow down issues/changes
+  - Intentional breaking changes with known impact
+  - Not always this smooth
+- Typical debugging steps
+  - Run tests with Node 14 - pass
+  - Run tests with Node 16 - hangs
+  - Run tests with Node 15 - hangs
+  - Isolated independent test that was hanging
+  - Console logs to identify where the test was hanging
+  - Chrome inspector with --inspect
+  - `git bisect`
+    - Checkout the main branch of Node.js
+    - Identify a good and bad commit
+    - Start the `git bisect` process - build node.js and running the tests at each step
+    - Set it up in a script to automate the process of running through the various commits
+  - Found the likely Node.js commit
+    - Look through the changes
+  - `NODE_DEBUG`
+    - Enables low level node.js runtime debug logs
+    - Can do specific subsystems
+    - Compare `NODE_DEBUG` output before and after
+  - Ask the experts for help
+    - Create a minimal Node.js core reproduce
+- How can you prepare for the upgrade?
+  - Try adding the current version and not just the LTS version and test routinely
+  - Github actions config: `pkgs/action`
+  - Automatically adds CI actions to test new versions of node
